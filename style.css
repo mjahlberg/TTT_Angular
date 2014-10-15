@@ -1,10 +1,12 @@
+h1 {
+	text-align: center;
+}
+
 .theBox {
-	width: 468px;
-	height: 468px;
-	border: 2px solid black;
-	border-style: solid;
-	border-color: red;
-	background-color: blue;
+	width: 472px;
+	height: 472px;
+	background-color: white;
+	margin: 0 auto;
 }
 
 .cells {
@@ -12,10 +14,10 @@
 	height: 150px;
 	display: inline-block;
 	float: left;
-	margin: 0px;
+	margin: 3px;
 	padding: 0px;
-	border-style: solid;
-	border-color: red;
+	background-color: black;
+	border-radius: 10px;
 
 }
 
@@ -24,5 +26,9 @@
 }
 
 .xclass {
-	background-color: green;
+	background-color: red;
 }
+
+
+
+

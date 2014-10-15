@@ -51,14 +51,24 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 
 		console.log("Cell : " + $scope.player1[this.$index] + " was chosen for player1");
 		console.log("Cell : " + $scope.player2[this.$index] + " was chosen for player2");
+		console.log($scope.player1[0]);
+		console.log($scope.player1[1]);
+		console.log($scope.player1[2]);
+		console.log($scope.player1[3]);
 		console.log($scope.player1[4]);
 		console.log($scope.player1[5]);
 		console.log($scope.player1[6]);
 		console.log($scope.player1[7]);
+		console.log($scope.player1[8]);
+		console.log($scope.player2[0]);
+		console.log($scope.player2[1]);
+		console.log($scope.player2[2]);
+		console.log($scope.player2[3]);
 		console.log($scope.player2[4]);
 		console.log($scope.player2[5]);
 		console.log($scope.player2[6]);
 		console.log($scope.player2[7]);
+		console.log($scope.player2[8]);
 
 
 
@@ -99,7 +109,3 @@ TTTApp.controller('TTTcontroller', function ($scope) {
   // if already x or o, then nothing happens
 
 });
-
-
-
-
