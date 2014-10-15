@@ -31,9 +31,13 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 
 		$scope.movecounter = $scope.movecounter + 1; // increment movecounter by one
 
-		if (($scope.player2[this.$index] == true) || ($scope.player2[this.$index] == true)) { // prevent user from choosing same cell twice
+		if (($scope.player1[this.$index] == true) || ($scope.player2[this.$index] == true)) { // prevent user from choosing same cell twice
 			return;
 		};
+
+		// if (($scope.playerTurn[this.$index] != true) || ($scope.playerTurn[this.$index] != true)) {
+		// 	return;
+		// }
 		
 		if (($scope.movecounter % 2) == 1) { // checking if movecounter is odd
 			$scope.player1[this.$index] = true;
@@ -46,31 +50,8 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 		}
 
 
-
-		console.log("Cell : " + $scope.player1[this.$index] + " was chosen for player1");
-		console.log("Cell : " + $scope.player2[this.$index] + " was chosen for player2");
-		console.log($scope.player1[0]);
-		console.log($scope.player1[1]);
-		console.log($scope.player1[2]);
-		console.log($scope.player1[3]);
-		console.log($scope.player1[4]);
-		console.log($scope.player1[5]);
-		console.log($scope.player1[6]);
-		console.log($scope.player1[7]);
-		console.log($scope.player1[8]);
-		console.log($scope.player2[0]);
-		console.log($scope.player2[1]);
-		console.log($scope.player2[2]);
-		console.log($scope.player2[3]);
-		console.log($scope.player2[4]);
-		console.log($scope.player2[5]);
-		console.log($scope.player2[6]);
-		console.log($scope.player2[7]);
-		console.log($scope.player2[8]);
-
-
-
-		//player 1 win logic
+		//player 1 win logic...
+		
 		if ($scope.player1[0] == true) {
 			if ($scope.player1[1] == true) {
 				if ($scope.player1[2] == true) {
@@ -121,7 +102,7 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 		}
 
 
-		//player 2 win logic
+		//player 2 win logic...
 
 		if ($scope.player2[0] == true) {
 			if ($scope.player2[1] == true) {
@@ -170,9 +151,43 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 					console.log("player 2 you win, cells 8 - 6 - 7");
 				}
 			}
-		}					
+		}
+
+		$scope.backLinkClick = function () {
+            window.location.reload(false); 
+        };	
+
+    //     $scope.addComment = function() { 
+		  // 	//Add manually using standard JavaScript
+		  // 	chatRef.push( {userName:$scope.userName, userGroup:$scope.userGroup, userComment:$scope.userComment} );
+		  // 	$scope.userComment = "" ;
+		  // 	$scope.userGroup = "" ;
+		  // 	$scope.userName = "" ;
+	  	// };				
 				
 
+
+
+		// console.log("Cell : " + $scope.player1[this.$index] + " was chosen for player1");
+		// console.log("Cell : " + $scope.player2[this.$index] + " was chosen for player2");
+		// console.log($scope.player1[0]);
+		// console.log($scope.player1[1]);
+		// console.log($scope.player1[2]);
+		// console.log($scope.player1[3]);
+		// console.log($scope.player1[4]);
+		// console.log($scope.player1[5]);
+		// console.log($scope.player1[6]);
+		// console.log($scope.player1[7]);
+		// console.log($scope.player1[8]);
+		// console.log($scope.player2[0]);
+		// console.log($scope.player2[1]);
+		// console.log($scope.player2[2]);
+		// console.log($scope.player2[3]);
+		// console.log($scope.player2[4]);
+		// console.log($scope.player2[5]);
+		// console.log($scope.player2[6]);
+		// console.log($scope.player2[7]);
+		// console.log($scope.player2[8]);
 
 
 

@@ -2,6 +2,11 @@ h1 {
 	text-align: center;
 }
 
+.refresh {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
 .theBox {
 	width: 472px;
 	height: 472px;

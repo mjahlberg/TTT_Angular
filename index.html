@@ -4,16 +4,17 @@
 		<meta charset="UTF-8">
 			<link rel="stylesheet" type="text/css" href="style.css">
 			
-			
-			
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
 
 		<script src="main.js"></script>
 	</head>
 	<body>
 		<h1>Tic Tac Toe</h1>
+		<div data-ng-hide="backHide" class="refresh">
+				     <a data-ng-click="backLinkClick()">
+					<button>NEW GAME</button>
+				 </div>
 		<div ng-controller="TTTcontroller">
-
 			<div class="theBox"> <!--The tic tac toe board-->
 				<div ng-repeat="currentCell in cells"> 
 					<!--currentCell is acting as each individual cell then repeating through the array in the JS doc-->
