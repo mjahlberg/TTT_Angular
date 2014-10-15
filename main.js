@@ -25,11 +25,8 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 
 	$scope.movecounter = 0; //declare global movemovecounterer so that it will work when called within the following function
 
-	$scope.test2 = function(){
-		console.log("just a test!");
-	};
 
-	// event handler to change cell banana based off odd/even movecounter value
+	// event handler to change cell thisCell based off odd/even movecounter value
 	$scope.playerTurn = function(thisCell){
 
 		$scope.movecounter = $scope.movecounter + 1; // increment movecounter by one
@@ -46,7 +43,8 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 			$scope.player2[this.$index] = true;
 			this.currentCell.status = 'O';
 
-		} 
+		}
+
 
 
 		console.log("Cell : " + $scope.player1[this.$index] + " was chosen for player1");
@@ -73,39 +71,152 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 
 
 		//player 1 win logic
-		if (($scope.player1[0] == true) && (($scope.player1[1] == true) && ($scope.player1[2] == true)) || (($scope.player1[3] == true) && ($scope.player1[6] == true)))
-			{
-			console.log("player 1 wins!!");
+		if ($scope.player1[0] == true) {
+			if ($scope.player1[1] == true) {
+				if ($scope.player1[2] == true) {
+					console.log("player 1 you win, cells 0 - 1 - 2");
+				}
+			}
+			else if ($scope.player1[3] == true){
+				if ($scope.player1[6] == true) {
+					console.log("player 1 you win, cells 0 - 3 - 6");
+				}
+			}
+			else if ($scope.player1[4] == true) {
+				if ($scope.player1[8] == true) {
+					console.log("player 1 you win, cells 0 - 4 - 8");
+					}
+				}
+			}
+		
+		if ($scope.player1[4] == true) {
+			if ($scope.player1[2] == true) {
+				if ($scope.player1[6] == true) {
+					console.log("player 1 you win, cells 4 - 2 - 6");
+				}
+			}
+			else if ($scope.player1[3] == true){
+				if ($scope.player1[5] == true) {
+					console.log("player 1 you win, cells 4 - 3 - 5");
+				}
+			}
+			else if ($scope.player1[1] == true) {
+				if ($scope.player1[7] == true) {
+					console.log("player 1 you win, cells 4 - 1 - 7");
+					}
+				}
+			}
+
+		if ($scope.player1[8] == true) {
+			if ($scope.player1[2] == true) {
+				if ($scope.player1[5] == true) {
+					console.log("player 1 you win, cells 8 - 2 - 5");
+				}
+			}
+			else if ($scope.player1[6] == true){
+				if ($scope.player1[7] == true) {
+					console.log("player 1 you win, cells 8 - 6 - 7");
+				}
+			}
 		}
-		if (($scope.player1[4] == true) && (($scope.player1[0] == true) && ($scope.player1[8] == true)) || (($scope.player1[3] == true) && ($scope.player1[5] == true)) || 
-			(($scope.player1[1] == true) && ($scope.player1[7] == true)) || (($scope.player1[6] == true) && ($scope.player1[2] == true))) {
-			console.log("player 1 wins!!");
-		}
-		if (($scope.player1[8] == true) && (($scope.player1[6] == true) && ($scope.player1[7] == true)) || (($scope.player1[2] == true) && ($scope.player1[5] == true))) 
-			{
-			console.log("player 1 wins!!");
-		};
+
+
+		//player 2 win logic
+
+		if ($scope.player2[0] == true) {
+			if ($scope.player2[1] == true) {
+				if ($scope.player2[2] == true) {
+					console.log("player 2 you win, cells 0 - 1 - 2");
+				}
+			}
+			else if ($scope.player2[3] == true){
+				if ($scope.player2[6] == true) {
+					console.log("player 2 you win, cells 0 - 3 - 6");
+				}
+			}
+			else if ($scope.player2[4] == true) {
+				if ($scope.player2[8] == true) {
+					console.log("player 2 you win, cells 0 - 4 - 8");
+					}
+				}
+			}
+		
+		if ($scope.player2[4] == true) {
+			if ($scope.player2[2] == true) {
+				if ($scope.player2[6] == true) {
+					console.log("player 2 you win, cells 4 - 2 - 6");
+				}
+			}
+			else if ($scope.player2[3] == true){
+				if ($scope.player2[5] == true) {
+					console.log("player 2 you win, cells 4 - 3 - 5");
+				}
+			}
+			else if ($scope.player2[1] == true) {
+				if ($scope.player2[7] == true) {
+					console.log("player 2 you win, cells 4 - 1 - 7");
+					}
+				}
+			}
+
+		if ($scope.player2[8] == true) {
+			if ($scope.player2[2] == true) {
+				if ($scope.player2[5] == true) {
+					console.log("player 2 you win, cells 8 - 2 - 5");
+				}
+			}
+			else if ($scope.player2[6] == true){
+				if ($scope.player2[7] == true) {
+					console.log("player 2 you win, cells 8 - 6 - 7");
+				}
+			}
+		}					
+				
 
 
 
-		//player 2 logic
-		if (($scope.player2[0] == true) && (($scope.player2[1] == true) && ($scope.player2[2] == true)) || (($scope.player2[3] == true) && ($scope.player2[6] == true)))
-			{
-			console.log("player 2 wins!!");
-		}
-		if (($scope.player2[4] == true) && (($scope.player2[0] == true) && ($scope.player2[8] == true)) || (($scope.player2[3] == true) && ($scope.player2[5] == true)) || 
-			(($scope.player2[1] == true) && ($scope.player2[7] == true)) || (($scope.player2[6] == true) && ($scope.player2[2] == true)))
-			{
-			console.log("player 2 wins!!");
-		}
-		if (($scope.player2[8] == true) && (($scope.player2[6] == true) && ($scope.player2[7] == true)) || (($scope.player2[2] == true) && ($scope.player2[5] == true))) 
-			{
-			console.log("player 2 wins!!");
-		};
+
+	// 	if (($scope.player1[0] == true) && (($scope.player1[1] == true) && ($scope.player1[2] == true)) 
+
+	// 		|| (($scope.player1[3] == true) && ($scope.player1[6] == true)))
+			
+
+	// 		{
+	// 		console.log("player 1 wins!!");
+	// 	}
+
+	// 	if (($scope.player1[4] == true) && (($scope.player1[0] == true) && ($scope.player1[8] == true)) || (($scope.player1[3] == true) && ($scope.player1[5] == true)) || 
+	// 		(($scope.player1[1] == true) && ($scope.player1[7] == true)) || (($scope.player1[6] == true) && ($scope.player1[2] == true))) {
+	// 		console.log("player 1 wins!!");
+	// 	}
+
+	// 	if (($scope.player1[8] == true) && (($scope.player1[6] == true) && ($scope.player1[7] == true)) || (($scope.player1[2] == true) && ($scope.player1[5] == true))) 
+	// 		{
+	// 		console.log("player 1 wins!!");
+	// 	};
 
 
-	};
+
+	// 	//player 2 logic
+	// 	if (($scope.player2[0] == true) && (($scope.player2[1] == true) && ($scope.player2[2] == true)) || (($scope.player2[3] == true) && ($scope.player2[6] == true)))
+	// 		{
+	// 		console.log("player 2 wins!!");
+	// 	}
+
+	// 	if (($scope.player2[4] == true) && (($scope.player2[0] == true) && ($scope.player2[8] == true)) || (($scope.player2[3] == true) && ($scope.player2[5] == true)) || 
+	// 		(($scope.player2[1] == true) && ($scope.player2[7] == true)) || (($scope.player2[6] == true) && ($scope.player2[2] == true)))
+	// 		{
+	// 		console.log("player 2 wins!!");
+	// 	}
+
+	// 	if (($scope.player2[8] == true) && (($scope.player2[6] == true) && ($scope.player2[7] == true)) || (($scope.player2[2] == true) && ($scope.player2[5] == true))) 
+	// 		{
+	// 		console.log("player 2 wins!!");
+	// 	};
+
+
+	// };
 		
   // if already x or o, then nothing happens
-
+	}
 });
