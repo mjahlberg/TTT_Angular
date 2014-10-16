@@ -22,11 +22,25 @@
 					<!-- There is no link to the css "xclass" or "oclass", angular takes care of that for you-->  
 					<!-- cell contents: {{currentCell.status}} 
  					-->				
-					</div>
 				</div>
 			</div>
-			<br>
-		    <p>{{$scope.winner}}</p>
+		</div>
+		<div class="userInput1">
+				<ul>
+					<li ng-repeat="oneComment in allcomments">
+						{{oneComment.userName}} <br>
+						{{oneComment.userComment}} <br><br>
+					</li>
+				</ul>
+				<div>
+					Username:
+					<input type="text" ng-model="userName" />
+					<br>
+					Comment:
+					<textarea ng-model="userComment" rows="25" cols="50"></textarea>
+
+					<input type="button" ng-click="addComment();" value="Add a comment" />
+				</div>
 		</div>
 	</body>
 </html>

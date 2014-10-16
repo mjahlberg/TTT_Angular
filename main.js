@@ -14,11 +14,11 @@ TTTApp.controller('TTTcontroller', function ($scope) {
   	{status: "G"}, 
   	{status: "H"}, 
   	{status: "I"}
-  	]
+  	];
 
-	$scope.player1 = [null, null, null, null, null, null, null, null, null]
+	$scope.player1 = [null, null, null, null, null, null, null, null, null];
 
-	$scope.player2 = [null, null, null, null, null, null, null, null, null]
+	$scope.player2 = [null, null, null, null, null, null, null, null, null];
 
 	// $scope.cellList[0];
 	//^ ^ If you ever need to refer to a position within the array
@@ -155,15 +155,15 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 
 		$scope.backLinkClick = function () {
             window.location.reload(false); 
+            console.log("refreshed!");
         };	
 
-    //     $scope.addComment = function() { 
-		  // 	//Add manually using standard JavaScript
-		  // 	chatRef.push( {userName:$scope.userName, userGroup:$scope.userGroup, userComment:$scope.userComment} );
-		  // 	$scope.userComment = "" ;
-		  // 	$scope.userGroup = "" ;
-		  // 	$scope.userName = "" ;
-	  	// };				
+        $scope.addComment = function() { 
+		  	//Add manually using standard JavaScript
+		  	chatRef.push( {userName:$scope.userName, userGroup:$scope.userGroup, userComment:$scope.userComment} );
+		  	$scope.userGroup = "" ;
+		  	$scope.userName = "" ;
+	  	};				
 				
 
 
@@ -233,5 +233,5 @@ TTTApp.controller('TTTcontroller', function ($scope) {
 	// };
 		
   // if already x or o, then nothing happens
-	}
+	};
 });

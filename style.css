@@ -7,11 +7,21 @@ h1 {
 	padding-bottom: 30px;
 }
 
+.userInput1 {
+	width: 500px;
+	height: 500px;
+	left: 800px;
+	float: right;
+	margin-right: 150px;
+}
+
 .theBox {
 	width: 472px;
 	height: 472px;
 	background-color: white;
-	margin: 0 auto;
+	position: relative;
+	float: left;	
+	left: 100px;
 }
 
 .cells {
