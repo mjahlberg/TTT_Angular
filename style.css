@@ -20,8 +20,8 @@ h1 {
 	height: 472px;
 	background-color: white;
 	position: relative;
-	float: left;	
-	left: 100px;
+	margin: 0 auto;
+
 }
 
 .cells {
@@ -42,6 +42,10 @@ h1 {
 
 .xclass {
 	background-color: red;
+}
+
+.numberInput {
+	color: black;
 }
 
 

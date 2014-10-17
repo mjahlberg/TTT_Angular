@@ -1,0 +1,9 @@
+{
+  "firebase": "ttt-matt",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

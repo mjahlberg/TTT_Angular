@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="TTTApp">
-	<head>
-		<meta charset="UTF-8">
+	<head>		
+
+			<!-- App CSS -->
 			<link rel="stylesheet" type="text/css" href="style.css">
 			
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
+			<!-- AngularJS -->
+    		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
 
-		<script src="main.js"></script>
+			<!-- Firebase -->
+    		<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+
+			<!-- AngularFire -->
+    		<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+			
+			<!-- App Javascript -->
+			<script src="main.js"></script>
+
 	</head>
 	<body>
 		<h1>Tic Tac Toe</h1>
@@ -14,18 +24,39 @@
 				     <a data-ng-click="backLinkClick()">
 					<button>NEW GAME</button>
 				 </div>
-		<div ng-controller="TTTcontroller">
+		<div ng-controller="TTTcontroller" ng-model="gameContainer">
 			<div class="theBox"> <!--The tic tac toe board-->
-				<div ng-repeat="currentCell in cells"> 
+				<div ng-repeat="currentCell in gameContainer.cellsArray"> 
 					<!--currentCell is acting as each individual cell then repeating through the array in the JS doc-->
 					<div class="cells" ng-click="playerTurn(thisCell)" ng-class="{xclass: currentCell.status=='X', oclass: currentCell.status=='O'}">
 					<!-- There is no link to the css "xclass" or "oclass", angular takes care of that for you-->  
 					<!-- cell contents: {{currentCell.status}} 
- 					-->				
+ 					-->		
+
+			        <!-- <div class="numberInputSource"> -->
+			        <!-- change number to not true or true -->
+			        	<!-- <div id="label"></div> -->
+					<!-- 	<select ng-click = "copy" id="mySelect" onchange="copy();">
+						    <option value="1">1</option>
+						    <option value="2">2</option>
+						    <option value="3">3</option>
+						    <option value="4">4</option>
+						    <option value="5">5</option>
+						    <option value="6">6</option>
+						    <option value="7">7</option>
+						    <option value="8">8</option>
+						    <option value="9">9</option>
+						</select>  -->
+			        <!-- </div> -->
+
+			    	</div>
 				</div>
 			</div>
+			<!-- <div ng-show="game winner">
+				YOU WIN
+			</div> -->
 		</div>
-		<div class="userInput1">
+		<!-- <div class="userInput1">
 				<ul>
 					<li ng-repeat="oneComment in allcomments">
 						{{oneComment.userName}} <br>
@@ -37,10 +68,25 @@
 					<input type="text" ng-model="userName" />
 					<br>
 					Comment:
-					<textarea ng-model="userComment" rows="25" cols="50"></textarea>
+					<textarea ng-model="userComment" rows="15" cols="50"></textarea>
 
 					<input type="button" ng-click="addComment();" value="Add a comment" />
 				</div>
-		</div>
+				<div>
+					<p>
+						Player 1 Wins: 
+					</p>
+				</div>
+		</div> -->
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
