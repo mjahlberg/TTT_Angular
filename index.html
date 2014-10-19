@@ -17,13 +17,17 @@
 			<!-- App Javascript -->
 			<script src="main.js"></script>
 
+			<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
 	</head>
 	<body>
-		<h1>Tic Tac Toe</h1>
-		<div data-ng-hide="backHide" class="refresh">
+		<div id="clouds">	
+			<div class="cloud x4"></div>
+		<div class="title">Tic Tac Toe</div>
+		<div class="cloud x3"></div>
+			<!-- <div data-ng-hide="backHide" class="refresh">
 				     <a data-ng-click="backLinkClick()">
-					<button>NEW GAME</button>
-				 </div>
+					<butt -->
 		<div ng-controller="TTTcontroller" ng-model="gameContainer">
 			<div class="theBox"> <!--The tic tac toe board-->
 				<div ng-repeat="currentCell in gameContainer.cellsArray"> 
@@ -48,14 +52,34 @@
 						    <option value="9">9</option>
 						</select>  -->
 			        <!-- </div> -->
-
 			    	</div>
 				</div>
+				<div class="winner1" ng-if="xWin">
+					<p>
+				    PLAYER 1 WINS!
+				    </p>
+				</div>
+				<div class="winner2" ng-if="oWin">
+					<p>
+				    PLAYER 2 WINS!
+				    </p>
+				</div>
+				<form>
+					<input class="refresh1" Type="button" value="Play Again?" onClick="history.go(0)" ng-if="gameover1">
+			</form>
+			<form>
+					<input class="refresh2" Type="button" value="Play Again?" onClick="history.go(0)" ng-if="gameover2">
+			</form>
+				<div class="cloud x4"></div>
+        		<div class="cloud x3"></div>
+		        <div class="cloud x2"></div>
+		        <div class="cloud x1"></div>
+				<div class="cloud x6"></div>
+				<div class="cloud x7"></div>
+				<div class="cloud x8"></div>
 			</div>
-			<!-- <div ng-show="game winner">
-				YOU WIN
-			</div> -->
 		</div>
+		
 		<!-- <div class="userInput1">
 				<ul>
 					<li ng-repeat="oneComment in allcomments">
@@ -78,6 +102,7 @@
 					</p>
 				</div>
 		</div> -->
+		</div>
 	</body>
 </html>
 

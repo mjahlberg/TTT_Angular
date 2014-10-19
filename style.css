@@ -1,26 +1,74 @@
-h1 {
-	text-align: center;
+body {
+	background: linear-gradient(#447799, #aacccc) no-repeat center center fixed;
+	z-index: -1;
 }
 
-.refresh {
-	text-align: center;
-	padding-bottom: 30px;
+.refresh1 {
+    font-family: 'Shadows Into Light';
+    font-size: 40px;
+    font-color: #447799;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+  	top: 600px;
+	left: 160px;
+    opacity: .6;
+    background-color:  white;
+    padding-bottom: 10px;
+    border-radius: 20px;
+   	position: fixed;
+
 }
 
-.userInput1 {
-	width: 500px;
-	height: 500px;
-	left: 800px;
-	float: right;
-	margin-right: 150px;
+.refresh2 {
+    font-family: 'Shadows Into Light';
+    font-size: 40px;
+    font-color: #447799;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+  	top: 600px;
+	right: 160px;
+    opacity: .6;
+    background-color:  white;
+    padding-bottom: 10px;
+    border-radius: 20px;
+   	position: fixed;
+
+}
+
+.title {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 70px;
+	text-align: center;
+	color: white;
+}
+
+.winner1 {
+	font-family: 'Shadows Into Light', cursive;
+	color: white;
+	position: fixed;
+	font-size: 50px;
+	margin-bottom: 150px;
+	top: 450px;
+	left: 100px;
+}
+.winner2 {
+	font-family: 'Shadows Into Light', cursive;
+	color: white;
+	position: fixed;
+	font-size: 50px;
+	margin-bottom: 150px;
+	top: 450px;
+	right: 100px;
 }
 
 .theBox {
-	width: 472px;
-	height: 472px;
-	background-color: white;
+	width: 500px;
+	height: 500px;
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto;	
+	z-index: 2;
 
 }
 
@@ -31,21 +79,132 @@ h1 {
 	float: left;
 	margin: 3px;
 	padding: 0px;
-	background-color: black;
+	border-style: solid;	
 	border-radius: 10px;
+	border-color: white;
+	z-index: 2;
+	opacity: .6;
+
 
 }
 
 .oclass {
-	background-color: yellow;
+	background: url(http://www.iconsdb.com/icons/preview/white/circle-outline-xxl.png);
+	background-size: 120px 120px;
+	background-position: center;
+	z-index: 2;
+	background-repeat: no-repeat;
+
+
+
 }
 
 .xclass {
-	background-color: red;
+	background: url(http://www.iconsdb.com/icons/preview/white/x-mark-xxl.png);
+	background-size: 130px 130px;
+	background-position: center;
+	z-index: 2;
+	background-repeat: no-repeat;
+
+
+}
+#clouds {
+	padding-top: 10px;
+	z-index: 0
 }
 
-.numberInput {
-	color: black;
+.cloud {
+	width: 200px;
+	height: 60px;
+	background: white;
+	border-radius: 100px;
+	position: relative;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: white;
+	width: 100px; height: 80px;
+	border: 1px solid white; /*Just to see it */
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+}
+
+.cloud:after {
+	width: 120px;
+	height: 120px;
+	top: -55px;
+	left: auto;
+	right: 15px;
+}
+
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 2000px;}
+	100% {margin-left: -1000px;}
+}
+
+.x1 {
+	-webkit-transform: scale(0.6);
+	transform: scale(0.6);
+	-webkit-animation: moveclouds 19s linear infinite;
+	opacity: .6;
+}
+
+.x2 {
+	-webkit-transform: scale(0.6);
+	transform: scale(0.6);
+	-webkit-animation: moveclouds 12s linear infinite;
+}
+
+.x3 {
+	-webkit-transform: scale(0.2);
+	transform: scale(0.2);
+	-webkit-animation: moveclouds 15s linear infinite;
+	opacity: .1;
+
+}
+
+.x4 {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-animation: moveclouds 11s linear infinite;
+	opacity: .3;
+
+}
+
+.x5 {
+	-webkit-transform: scale(0.4);
+	transform: scale(0.4);
+	-webkit-animation: moveclouds 26s linear infinite;
+	opacity: .9;
+
+}
+.x6 {
+	-webkit-transform: scale(0.4);
+	transform: scale(0.4);
+	-webkit-animation: moveclouds 17s linear infinite;
+	opacity: .9;
+
+}
+.x7 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-animation: moveclouds 20s linear infinite;
+	opacity: .1;
+
+}
+.x8 {
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-animation: moveclouds 19s linear infinite;
+	opacity: .3;
+
 }
 
 

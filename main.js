@@ -89,17 +89,20 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play1[0] == true) {
 			if ($scope.gameContainer.play1[1] == true) {
 				if ($scope.gameContainer.play1[2] == true) {
-					alert("player 1 you win, cells 0 - 1 - 2");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play1[3] == true){
 				if ($scope.gameContainer.play1[6] == true) {
-					alert("player 1 you win, cells 0 - 3 - 6");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play1[4] == true) {
 				if ($scope.gameContainer.play1[8] == true) {
-					alert("player 1 you win, cells 0 - 4 - 8");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 					}
 				}
 			}
@@ -107,17 +110,20 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play1[4] == true) {
 			if ($scope.gameContainer.play1[2] == true) {
 				if ($scope.gameContainer.play1[6] == true) {
-					alert("player 1 you win, cells 4 - 2 - 6");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play1[3] == true){
 				if ($scope.gameContainer.play1[5] == true) {
-					alert("player 1 you win, cells 4 - 3 - 5");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play1[1] == true) {
 				if ($scope.gameContainer.play1[7] == true) {
-					alert("player 1 you win, cells 4 - 1 - 7");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 					}
 				}
 			}
@@ -125,12 +131,14 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play1[8] == true) {
 			if ($scope.gameContainer.play1[2] == true) {
 				if ($scope.gameContainer.play1[5] == true) {
-					alert("player 1 you win, cells 8 - 2 - 5");
+					$scope.xWin = "X is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play1[6] == true){
 				if ($scope.gameContainer.play1[7] == true) {
-					alert("player 1 you win, cells 8 - 6 - 7");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover1 = "play again";
 				}
 			}
 		}
@@ -141,17 +149,20 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play2[0] == true) {
 			if ($scope.gameContainer.play2[1] == true) {
 				if ($scope.gameContainer.play2[2] == true) {
-					alert("player 2 you win, cells 0 - 1 - 2");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play2[3] == true){
 				if ($scope.gameContainer.play2[6] == true) {
-					alert("player 2 you win, cells 0 - 3 - 6");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play2[4] == true) {
 				if ($scope.gameContainer.play2[8] == true) {
-					alert("player 2 you win, cells 0 - 4 - 8");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 					}
 				}
 			}
@@ -159,17 +170,20 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play2[4] == true) {
 			if ($scope.gameContainer.play2[2] == true) {
 				if ($scope.gameContainer.play2[6] == true) {
-					alert("player 2 you win, cells 4 - 2 - 6");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play2[3] == true){
 				if ($scope.gameContainer.play2[5] == true) {
-					alert("player 2 you win, cells 4 - 3 - 5");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play2[1] == true) {
 				if ($scope.gameContainer.play2[7] == true) {
-					alert("player 2 you win, cells 4 - 1 - 7");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 					}
 				}
 			}
@@ -177,12 +191,14 @@ TTTApp.controller('TTTcontroller', function($scope,$firebase) { //adding $fireba
 		if ($scope.gameContainer.play2[8] == true) {
 			if ($scope.gameContainer.play2[2] == true) {
 				if ($scope.gameContainer.play2[5] == true) {
-					alert("player 2 you win, cells 8 - 2 - 5");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 			else if ($scope.gameContainer.play2[6] == true){
 				if ($scope.gameContainer.play2[7] == true) {
-					alert("player 2 you win, cells 8 - 6 - 7");
+					$scope.oWin = "O is the Winner";
+					$scope.gameover2 = "play again";
 				}
 			}
 		}		
