@@ -4,7 +4,7 @@ body {
 }
 
 .refresh1 {
-    font-family: 'Shadows Into Light';
+    font-family: 'Indie Flower', cursive;
     font-size: 40px;
     font-color: #447799;
     text-decoration: none;
@@ -21,7 +21,7 @@ body {
 }
 
 .refresh2 {
-    font-family: 'Shadows Into Light';
+    font-family: 'Indie Flower', cursive;
     font-size: 40px;
     font-color: #447799;
     text-decoration: none;
@@ -38,14 +38,14 @@ body {
 }
 
 .title {
-	font-family: 'Shadows Into Light', cursive;
-	font-size: 70px;
+	font-family: 'Indie Flower', cursive;
+	font-size: 90px;
 	text-align: center;
 	color: white;
 }
 
 .winner1 {
-	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Indie Flower', cursive;
 	color: white;
 	position: fixed;
 	font-size: 50px;
@@ -54,7 +54,7 @@ body {
 	left: 100px;
 }
 .winner2 {
-	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Indie Flower', cursive;
 	color: white;
 	position: fixed;
 	font-size: 50px;
